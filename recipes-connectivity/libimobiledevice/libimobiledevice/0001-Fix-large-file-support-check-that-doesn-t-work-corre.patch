@@ -1,0 +1,31 @@
+From 7e5bbf4f56febd2e4922b1d504e38d2cf6dd3fc7 Mon Sep 17 00:00:00 2001
+From: James Davila <jdavila@medxchange.com>
+Date: Wed, 5 Sep 2018 16:41:34 -0400
+Subject: [PATCH] Fix large file support check that doesn't work correctly when
+ cross-compiling
+
+---
+ configure.ac | 10 ----------
+ 1 file changed, 10 deletions(-)
+
+diff --git a/configure.ac b/configure.ac
+index 44daa65..5b677a3 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -182,16 +182,6 @@ LFS_CFLAGS=''
+ if test "$enable_largefile" != no; then
+     if test "$ac_cv_sys_file_offset_bits" != 'no'; then
+ 	LFS_CFLAGS="$LFS_CFLAGS -D_FILE_OFFSET_BITS=$ac_cv_sys_file_offset_bits"
+-    else
+-	AC_MSG_CHECKING(for native large file support)
+-	AC_RUN_IFELSE([AC_LANG_SOURCE([#include <unistd.h>
+-	  int main (int argc, char **argv)
+-	  {
+-	      exit(!(sizeof(off_t) == 8));
+-	  }])],
+-	[ac_cv_sys_file_offset_bits=64; AC_DEFINE(_FILE_OFFSET_BITS,64)
+-	 AC_MSG_RESULT(yes)],
+-	[AC_MSG_RESULT(no)])
+     fi
+     if test "$ac_cv_sys_large_files" != 'no'; then
+ 	LFS_CFLAGS="$LFS_CFLAGS -D_LARGE_FILES=1"
