@@ -1,4 +1,4 @@
-DESCRIPTION = "This daemon is in charge of multiplexing connections over USB to an iPhone or iPod touch."
+DESCRIPTION = "A client library to multiplex connections from and to iOS devices."
 LICENSE = "LGPLv2.1"
 LIC_FILES_CHKSUM = "file://COPYING;md5=6ab17b41640564434dda85c06b7124f7"
 
@@ -17,6 +17,3 @@ FILES_${PN} += "${base_libdir}/udev/rules.d/"
 
 # fix usbmuxd installing files to /usr/lib64 on 64bit hosts:
 #EXTRA_OECMAKE = "-DLIB_SUFFIX=${@d.getVar('baselib').replace('lib', '')}"
-
-#PACKAGECONFIG ??= ""
-#PACKAGECONFIG[plist] = "-DWANT_PLIST=1,-DWANT_PLIST=0,libplist"

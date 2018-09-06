@@ -7,14 +7,15 @@ LIC_FILES_CHKSUM = "\
 
 HOMEPAGE ="http://www.libimobiledevice.org/"
 
-DEPENDS = "libplist usbmuxd libtasn1 gnutls libgcrypt"
+DEPENDS = "libplist libusbmuxd libtasn1 gnutls libgcrypt"
 
-SRC_URI = "http://www.libimobiledevice.org/downloads/libimobiledevice-${PV}.tar.bz2 \
-           file://0001-Fix-large-file-support-check-that-doesn-t-work-corre.patch \
+
+SRCREV = "fb71aeef10488ed7b0e60a1c8a553193301428c0"
+SRC_URI = "git://git.libimobiledevice.org/libimobiledevice.git;protocol=http \
+           file://0001-fix-large-file-check.patch \
            "
 
-SRC_URI[md5sum] = "8757900ba7bbe2ef5f54342415d0223e"
-SRC_URI[sha256sum] = "786b0de0875053bf61b5531a86ae8119e320edab724fc62fe2150cc931f11037"
+S = "${WORKDIR}/git"
 
 inherit autotools pkgconfig
 
