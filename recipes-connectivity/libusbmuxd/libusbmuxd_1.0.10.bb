@@ -8,7 +8,7 @@ inherit autotools pkgconfig gitpkgv
 
 PKGV = "${GITPKGVTAG}"
 
-SRCREV = "fe871d7a2fb67170ecc27c5b88d84585d0de6a89"
+SRCREV = "c75605d862cd1c312494f6c715246febc26b2e05"
 SRC_URI = "git://git.sukimashita.com/libusbmuxd.git;protocol=http"
 
 S = "${WORKDIR}/git"
