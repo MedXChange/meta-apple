@@ -10,7 +10,7 @@ HOMEPAGE ="http://www.libimobiledevice.org/"
 DEPENDS = "libplist libusbmuxd libtasn1 gnutls libgcrypt openssl"
 
 SRCREV = "d200973897e281ba35d6c9c433e1355a49056da8"
-SRC_URI = "git://git.libimobiledevice.org/libimobiledevice.git;protocol=http \
+SRC_URI = "git://github.com/libimobiledevice/libimobiledevice.git;protocol=http \
            file://0001-fix-large-file-check.patch \
            "
 
