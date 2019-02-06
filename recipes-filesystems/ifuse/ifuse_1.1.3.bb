@@ -5,11 +5,9 @@ HOMEPAGE ="http://www.libimobiledevice.org/"
 
 DEPENDS = "fuse libimobiledevice usbmuxd"
 
-SRC_URI = " \
-    http://www.libimobiledevice.org/downloads/ifuse-${PV}.tar.bz2 \
-"
+SRCREV = "e75d32c34d0e8b80320f0a007d5ecbb3f55ef7f0"
+SRC_URI = "git://github.com/libimobiledevice/ifuse.git;protocol=http"
 
-SRC_URI[md5sum] = "83478c7b531b26db286c293bb25bd917"
-SRC_URI[sha256sum] = "a788de66fb7720c84a5a775df415f78bbfb7c467a76c732d23292c6986252add"
+S = "${WORKDIR}/git"
 
 inherit autotools pkgconfig

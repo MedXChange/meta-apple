@@ -7,8 +7,7 @@ LIC_FILES_CHKSUM = "\
 
 HOMEPAGE ="http://www.libimobiledevice.org/"
 
-DEPENDS = "libplist libusbmuxd libtasn1 gnutls libgcrypt"
-
+DEPENDS = "libplist libusbmuxd libtasn1 gnutls libgcrypt openssl"
 
 SRCREV = "d200973897e281ba35d6c9c433e1355a49056da8"
 SRC_URI = "git://git.libimobiledevice.org/libimobiledevice.git;protocol=http \
